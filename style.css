@@ -1,0 +1,11 @@
+/* Add these styles to your existing Game Hub style.css */
+
+.hangman-special {
+    background-color: #d6f5d6; /* A slightly different green for the variation */
+    border: 1px solid #1e8449;
+}
+
+.utility {
+    background-color: #f0f8ff; /* Light blue/white for the utility app */
+    border: 1px solid #1f618d;
+}
