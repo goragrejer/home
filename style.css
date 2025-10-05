@@ -1,134 +1,275 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
 
+
+
 body {
-    /* Use a more modern font */
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    /* Use a darker, more engaging background */
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); 
-    color: #333;
+
+    /* Use a more modern font */
+
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    /* Use a darker, more engaging background */
+
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); 
+
+    color: #333;
+
 }
+
+
 
 .container {
-    background: #ffffff;
-    padding: 50px;
-    border-radius: 15px;
-    /* Deeper, softer shadow for a floating effect */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 90%;
-    max-width: 900px;
+
+    background: #ffffff;
+
+    padding: 50px;
+
+    border-radius: 15px;
+
+    /* Deeper, softer shadow for a floating effect */
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+
+    width: 90%;
+
+    max-width: 900px;
+
 }
+
+
 
 h1 {
-    /* Bold and clear title */
-    font-size: 2.8em;
-    font-weight: 800;
-    color: #007bff;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
+
+    /* Bold and clear title */
+
+    font-size: 2.8em;
+
+    font-weight: 800;
+
+    color: #007bff;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1px;
+
 }
+
+
 
 .subtitle {
-    color: #555;
-    margin-bottom: 40px;
-    font-size: 1.2em;
-    font-weight: 300;
+
+    color: #555;
+
+    margin-bottom: 40px;
+
+    font-size: 1.2em;
+
+    font-weight: 300;
+
 }
 
+
+
 /* ------------------------------------- */
+
 /* --- Game Cards Layout (Modern Grid) --- */
+
 /* ------------------------------------- */
+
 .game-list {
-    display: grid;
-    /* Responsive columns: at least 250px wide, max 3 columns */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
+
+    display: grid;
+
+    /* Responsive columns: at least 250px wide, max 3 columns */
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+
 }
+
+
 
 .game-card {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #333;
-    
-    /* 🚩 FIX APPLIED: This prevents the cards from stretching too wide */
-    max-width: 300px; 
-    
-    /* Subtle 3D lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    /* Subtle 3D lift effect */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    text-align: left;
+
 }
+
+
 
 .game-card:hover {
-    /* More pronounced visual feedback */
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
+    /* More pronounced visual feedback */
+
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
 }
+
+
 
 .game-card h2 {
-    font-size: 1.4em;
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 8px;
-    /* Remove the old line and use the background color for emphasis */
-    border-bottom: none; 
+
+    font-size: 1.4em;
+
+    font-weight: 600;
+
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    /* Remove the old line and use the background color for emphasis */
+
+    border-bottom: none; 
+
 }
+
+
 
 .game-card p {
-    font-size: 0.95em;
-    font-weight: 300;
-    margin-bottom: 0;
-    flex-grow: 1; /* Pushes the card content to the bottom */
+
+    font-size: 0.95em;
+
+    font-weight: 300;
+
+    margin-bottom: 0;
+
+    flex-grow: 1; /* Pushes the card content to the bottom */
+
 }
 
 
+
+
+
 /* ------------------------------------- */
+
 /* --- Card Colors (More Thematic) --- */
+
 /* ------------------------------------- */
+
+
 
 /* Tic-Tac-Toe (Strategy/Logic) */
+
 .tictactoe {
-    background: linear-gradient(45deg, #a8ff78, #78ffd6);
-    border: 1px solid #28a745;
+
+    background: linear-gradient(45deg, #a8ff78, #78ffd6);
+
+    border: 1px solid #28a745;
+
 }
+
+
 
 /* Hangman (Classic/Wordplay) */
+
 .hangman {
-    background: linear-gradient(45deg, #89f7fe, #66a6ff);
-    border: 1px solid #007bff;
+
+    background: linear-gradient(45deg, #89f7fe, #66a6ff);
+
+    border: 1px solid #007bff;
+
 }
+
+
 
 /* Hangman (Specialized) */
+
 .hangman-special {
-    background: linear-gradient(45deg, #e0c3fc, #8ec5fc);
-    border: 1px solid #6f42c1; /* Violet */
+
+    background: linear-gradient(45deg, #e0c3fc, #8ec5fc);
+
+    border: 1px solid #6f42c1; /* Violet */
+
 }
+
+
 
 /* Utility (To-Do List/Productivity) */
+
 .utility {
-    background: linear-gradient(45deg, #fceabb, #f8b500);
-    border: 1px solid #ffc107; /* Orange/Yellow */
+
+    background: linear-gradient(45deg, #fceabb, #f8b500);
+
+    border: 1px solid #ffc107; /* Orange/Yellow */
+
 }
 
-/* Pong (Arcade/Action) */
-.pong {
-    background: linear-gradient(45deg, #ff00cc, #3333ff); 
-    border: 1px solid #ff00cc;
+
+
+/* Placeholder (Future Project) */
+
+.placeholder {
+
+    background-color: #f0f0f0;
+
+    border: 1px dashed #999; 
+
+    opacity: 0.8;
+
+    cursor: not-allowed;
+
+    box-shadow: none; /* Make placeholder feel less active */
+
 }
+
+
+
+.placeholder:hover {
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+
 
 /* Footer Style */
+
 .footer-text {
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #999;
-    font-weight: 300;
+
+    margin-top: 20px;
+
+    font-size: 0.9em;
+
+    color: #999;
+
+    font-weight: 300;
+
 }
