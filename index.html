@@ -1,95 +1,64 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My JavaScript Game Hub</title>
-
-    <link rel="stylesheet" href="style.css?v=2">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Game Hub</title>
+    <link rel="stylesheet" href="style.css" id="css-link">
 </head>
-
 <body>
 
+    <div class="container">
+        <h1>🎮 My JavaScript Game Hub</h1>
+        <p class="subtitle">Welcome to my collection of browser projects built with vanilla JavaScript!</p>
 
+        <div class="game-list">
+            
+            <a href="/tictactoe/" class="game-card tictactoe">
+                <h2>Tic-Tac-Toe</h2>
+                <p>The classic paper-and-pencil game, ready to play in the browser.</p>
+            </a>
 
-    <div class="container">
+            <a href="/hangman/" class="game-card hangman">
+                <h2>Hangman</h2>
+                <p>The complete guessing game, featuring random words and custom input.</p>
+            </a>
 
-        <h1>🎮 My JavaScript Game Hub</h1>
+            <a href="/hangmanoneword/" class="game-card hangman-special">
+                <h2>Hangman (One Word)</h2>
+                <p>A variation on the classic game, likely a streamlined or focused version.</p>
+            </a>
 
-        <p class="subtitle">Welcome to my collection of browser projects built with vanilla JavaScript!</p>
+            <a href="/goragrejer/" class="game-card utility">
+                <h2>Go-ra Grejer (To-Do List)</h2>
+                <p>A student-focused task manager application in Swedish and English.</p>
+            </a>
+            
+            <a href="/pong/" class="game-card pong">
+                <h2>Pong (Next Project!)</h2>
+                <p>The original arcade game, coming soon using the Canvas API.</p>
+            </a>
 
+            <a href="/placeholder/" class="game-card placeholder">
+                <h2>Placeholder Project</h2>
+                <p>Reserved for a future JavaScript project idea.</p>
+            </a>
+            
+        </div>
+        
+        <p class="footer-text">Built with passion by a coding enthusiast.</p>
+    </div>
 
+    <script>
+        const cssLink = document.getElementById('css-link');
 
-        <div class="game-list">
+        if (cssLink) {
+            // Generates a unique number based on the current time in milliseconds
+            const uniqueVersion = new Date().getTime();
 
-            
-
-            <a href="/tictactoe/" class="game-card tictactoe">
-
-                <h2>Tic-Tac-Toe</h2>
-
-                <p>The classic paper-and-pencil game, ready to play in the browser.</p>
-
-            </a>
-
-
-
-            <a href="/hangman/" class="game-card hangman">
-
-                <h2>Hangman</h2>
-
-                <p>The complete guessing game, featuring random words and custom input.</p>
-
-            </a>
-
-
-
-            <a href="/hangmanoneword/" class="game-card hangman-special">
-
-                <h2>Hangman (One Word)</h2>
-
-                <p>A variation on the classic game, likely a streamlined or focused version.</p>
-
-            </a>
-
-
-
-            <a href="/goragrejer/" class="game-card utility">
-
-                <h2>Go-ra Grejer (To-Do List)</h2>
-
-                <p>A student-focused task manager application in Swedish and English.</p>
-
-            </a>
-
-            
-
-            <a href="/pong/" class="game-card placeholder">
-
-                <h2>Pong (Next Project!)</h2>
-
-                <p>The original arcade game, coming soon using the Canvas API.</p>
-
-            </a>
-
-            
-
-        </div>
-
-        
-
-        <p class="footer-text">Built with passion by a coding enthusiast.</p>
-
-    </div>
-
-
-
+            // Appends the unique number as a query parameter to the href
+            cssLink.href = cssLink.href + '?v=' + uniqueVersion;
+        }
+    </script>
 </body>
-
 </html>
